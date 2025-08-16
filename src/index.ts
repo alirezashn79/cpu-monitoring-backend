@@ -2,9 +2,10 @@ import express from 'express'
 import 'dotenv/config'
 import http from 'node:http'
 import cors from 'cors'
-import { FRONT_END_URL } from './constants/constants'
+
 import socket from './socket/socket'
 const PORT = process.env.PORT
+const FRONT_END_URL = process.env.FRONT_END_URL
 
 const app = express()
 
