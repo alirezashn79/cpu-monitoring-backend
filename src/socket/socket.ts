@@ -1,10 +1,10 @@
 import http from 'node:http'
 import { Server, Socket } from 'socket.io'
-import { FRONT_END_URL } from '../constants/constants'
 import osUtils from 'os-utils'
 import os from 'os'
 
 type TimePoint = [number, number]
+const FRONT_END_URL = process.env.FRONT_END_URL
 
 export default function socket(server: http.Server): void {
   const io = new Server(server, {
